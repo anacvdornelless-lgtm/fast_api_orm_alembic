@@ -10,4 +10,4 @@ wheels/
 .venv
 
 # Variáveis de ambiente (senhas)
-.env.DS_Store
+.DS_Store
