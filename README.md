@@ -45,7 +45,7 @@ user=...
 senha=...
 host=localhost
 port=5432
-banco=fastapi_orm_db
+banco=db_escola
 ```
 
 Se o usuário ou a senha do Postgres daqui forem diferentes, editar o arquivo.
@@ -55,7 +55,7 @@ Se o usuário ou a senha do Postgres daqui forem diferentes, editar o arquivo.
 Conectar no Postgres e rodar:
 
 ```sql
-CREATE DATABASE fastapi_orm_db;
+CREATE DATABASE db_escola;
 ```
 
 ## 6. Criar as tabelas (Alembic)
