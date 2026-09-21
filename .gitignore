@@ -8,6 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
-
+.env
 # Variáveis de ambiente (senhas)
 .DS_Store
