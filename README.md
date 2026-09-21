@@ -1,5 +1,5 @@
 # Clonar em outra máquina e testar
-
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 O clone traz o código (e o `.env`, que foi enviado). O banco de dados NÃO vem junto: ele começa vazio.
 
 ## 1. Conferir o que precisa estar instalado
