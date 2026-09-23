@@ -1,4 +1,20 @@
-# Clonar em outra máquina e testar
+Instalar o uv (gerenciador de pacotes)
+Mac : curl -LsSf https://astral.sh/uv/install.sh | sh
+Windows : powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+Conferir que instalou: uv --version
+Clonar o repositório (no VS Code ou terminal): git clone <url-do-repo>
+Entrar na pasta clonada e abrir no VS Code.
+Instalar as dependências do projeto: uv sync
+Ativar o ambiente virtual
+Mac: source .venv/bin/activate
+Windows: .venv\Scripts\activate
+Conferir/criar o banco no DBeaver — se não existir, criar com CREATE DATABASE db_escola; (nome tem que bater com o que vai no .env)
+Criar o arquivo .env na raiz do projeto (não vem do clone, é sempre manual) com as variáveis que o database.py pede: user, senha, host, port, banco — e salvar o arquivo (Cmd+S / Ctrl+S, esse foi o erro que travou tudo por um tempo).
+Rodar as migrations: uv run alembic upgrade head → isso cria as tabelas vazias no banco.
+Conferir no DBeaver se as tabelas apareceram (der refresh; se o banco não aparecer na árvore, ativar "Show all databases" nas configurações da conexão).
+Subir a API: uv run uvicorn app.main:app --reload
+Testar no Postman, respeitando a ordem das chaves estrangeiras (banco vem vazio, é normal):
+
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 O clone traz o código (e o `.env`, que foi enviado). O banco de dados NÃO vem junto: ele começa vazio.
 
